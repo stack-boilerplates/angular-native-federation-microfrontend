@@ -7,8 +7,8 @@ export const routes: Routes = [
   // Add this route:
   {
     path: 'remote-component',
-    loadComponent: () =>
-      loadRemoteModule('mfe1', './Component').then((m) => m.AppComponent),
+    loadChildren: () =>
+      loadRemoteModule('mfe1', './routes').then((m) => m.routes),
   },
   {
     path: 'remote-module',

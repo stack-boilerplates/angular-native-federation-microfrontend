@@ -7,7 +7,7 @@ import { RemoteComponent } from './remote.component';
   declarations: [RemoteComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild([{ path: '', component: RemoteComponent }]),
+    //RouterModule.forChild([{ path: '', component: RemoteComponent }]),
   ],
 })
 export class RemoteModule {}
