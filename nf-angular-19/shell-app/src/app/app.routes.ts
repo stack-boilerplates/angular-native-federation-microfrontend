@@ -3,9 +3,13 @@ import { loadRemoteModule } from '@angular-architects/native-federation';
 
 export const routes: Routes = [
   {
-    path: 'remote',
+    path: 'remote-component',
     loadComponent: () =>
       loadRemoteModule('mfe1', './Component').then((m) => m.AppComponent),
-    pathMatch: 'full',
+  },
+  {
+    path: 'remote-module',
+    loadChildren: () =>
+      loadRemoteModule('mfe2', './Module').then((m) => m.RemoteModule),
   },
 ];
